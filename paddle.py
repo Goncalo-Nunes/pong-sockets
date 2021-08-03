@@ -31,6 +31,8 @@ class Paddle:
         if keys[pygame.K_DOWN] and (self.y + self.HEIGHT < WINDOW_HEIGHT):
             self.y += self.SPEED
 
+        return self.get_pos()
+
         
 
 

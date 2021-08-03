@@ -7,9 +7,10 @@ class Ball:
     def __init__(self, x, y):
         self.x = x
         self.y = y
-        self.RADIUS = 16
-        self.x_velocity = 5
-        self.y_velocity = randint(-5, 5)
+        self.RADIUS = 14
+        self.SPEED = 3
+        self.x_velocity = self.SPEED
+        self.y_velocity = randint(-self.SPEED, self.SPEED)
 
     def get_pos(self):
         return (self.x, self.y)
@@ -20,8 +21,9 @@ class Ball:
     def reset(self):
         self.x = WINDOW_WIDTH / 2
         self.y = WINDOW_HEIGHT / 2
-        self.x_velocity = 5
-        self.y_velocity = randint(-5, 5)
+        self.x_velocity = self.SPEED
+        self.y_velocity = randint(-self.SPEED, self.SPEED)
+
 
 
     def draw(self, win):
